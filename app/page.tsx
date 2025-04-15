@@ -29,7 +29,7 @@ export default function Home() {
               Contato
             </Link>
           </nav>
-          <Button className="bg-[#bba058]">Agendar Avaliação</Button>
+          <a href="https://wa.me/5513974150784" target="_blank" className="bg-[#bba058] p-2 px-4 text-white font-medium rounded">Agendar Avaliação</a>
         </div>
       </header>
 
@@ -446,103 +446,27 @@ export default function Home() {
                     <Phone className="h-5 w-5 text-gray-600 mt-0.5" />
                     <div>
                       <h3 className="font-bold">Telefone</h3>
-                      <p className="text-gray-500">(555) 123-4567</p>
+                      <a className="text-gray-500" href="https://wa.me/5513974150784" target="_blank">13 97415-0784</a>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <Mail className="h-5 w-5 text-gray-600 mt-0.5" />
                     <div>
                       <h3 className="font-bold">Email</h3>
-                      <p className="text-gray-500">info@nutrilife.com</p>
+                      <a className="text-gray-500" href="mailto:andresouzafms@gmail.com">andresouzafms@gmail.com</a>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-4">
-                    <MapPin className="h-5 w-5 text-gray-600 mt-0.5" />
-                    <div>
-                      <h3 className="font-bold">Escritório</h3>
-                      <p className="text-gray-500">Rua do Bem-Estar, 123, Cidade Saudável, CS 12345</p>
-                    </div>
-                  </div>
+
                 </div>
 
                 <div className="pt-4">
                   <h3 className="font-bold mb-2">Siga-nos</h3>
                   <div className="flex space-x-4">
-                    <Link href="#" className="text-gray-500 hover:text-gray-600">
+                    <Link href="https://www.instagram.com/nutriadrsouza" target="_blank" className="text-gray-500 hover:text-gray-600">
                       <Instagram className="h-6 w-6" />
                       <span className="sr-only">Instagram</span>
                     </Link>
-                    <Link href="#" className="text-gray-500 hover:text-gray-600">
-                      <Facebook className="h-6 w-6" />
-                      <span className="sr-only">Facebook</span>
-                    </Link>
-                    <Link href="#" className="text-gray-500 hover:text-gray-600">
-                      <Twitter className="h-6 w-6" />
-                      <span className="sr-only">Twitter</span>
-                    </Link>
                   </div>
-                </div>
-              </div>
-
-              <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
-                <div className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold">Envie-nos uma Mensagem</h3>
-                  <form className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <label htmlFor="first-name" className="text-sm font-medium">
-                          Nome
-                        </label>
-                        <input
-                          id="first-name"
-                          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                          placeholder="João"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="last-name" className="text-sm font-medium">
-                          Sobrenome
-                        </label>
-                        <input
-                          id="last-name"
-                          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                          placeholder="Silva"
-                        />
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
-                        Email
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="joao.silva@exemplo.com"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="subject" className="text-sm font-medium">
-                        Assunto
-                      </label>
-                      <input
-                        id="subject"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Como podemos ajudar?"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium">
-                        Mensagem
-                      </label>
-                      <textarea
-                        id="message"
-                        className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Diga-nos o que você está procurando..."
-                      />
-                    </div>
-                    <Button className="w-full bg-gray-600 hover:bg-gray-700">Enviar Mensagem</Button>
-                  </form>
                 </div>
               </div>
             </div>

@@ -116,8 +116,8 @@ const plans = [plans1, plans2];
 
 export default function Pricing({ planIndex = 0 }: { planIndex: number }) {
   return (
-    <div className="py-8">
-      <div className="grid grid-cols-3 gap-6">
+    <div className="py-0 md:py-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {plans[planIndex].map((plan, index) => (
           <Card
             key={index}
@@ -140,7 +140,7 @@ export default function Pricing({ planIndex = 0 }: { planIndex: number }) {
                 {
                   plan.discountPercentage ? (
                     <div className="flex flex-col">
-                      <p className="text-sm text-gray-500 ml-2 line-through">{plan.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+                      <p className="text-sm text-gray-500 line-through">{plan.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                       <p className="text-3xl font-bold">
                         {(plan.price - (plan.price * plan.discountPercentage / 100)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                       </p>
@@ -168,7 +168,7 @@ export default function Pricing({ planIndex = 0 }: { planIndex: number }) {
             </CardContent>
             <CardFooter>
               <Button
-                className={`w-full ${plan.highlighted ? "bg-[#bba058] hover:bg-[#a08a48]" : "bg-gray-600 hover:bg-gray-700"}`}
+                className={`w-full font-bold ${plan.highlighted ? "bg-[#bba058] hover:bg-[#a08a48]" : "bg-gray-600 hover:bg-gray-700"}`}
               >
                 {plan.buttonText}
               </Button>
