@@ -12,7 +12,7 @@ export default function Home() {
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between mx-auto">
           <div className="flex items-center gap-2">
-            <Image src="/logo-nav.png" alt="Logo" width={60} height={60} />
+            <img src="/logo-nav.png" alt="Logo" width={60} height={60} />
             <span className="text-xl font-bold">André Souza </span>
           </div>
           <nav className="hidden md:flex gap-6">
@@ -52,7 +52,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="mx-auto lg:mx-0">
-                <Image
+                <img
                   src="/logo-full.png"
                   alt="Nutricionista consultando com cliente"
                   width={550}
@@ -234,7 +234,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="order-1 lg:order-2">
-                  <Image
+                  <img
                     src="/placeholder.svg?height=400&width=600"
                     alt="Pessoa se exercitando"
                     width={600}
@@ -246,7 +246,7 @@ export default function Home() {
 
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
-                  <Image
+                  <img
                     src="/placeholder.svg?height=400&width=600"
                     alt="Preparação de refeição saudável"
                     width={600}
@@ -313,7 +313,7 @@ export default function Home() {
               <Card className="border-2 border-gray-100">
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-center space-x-4">
-                    <Image
+                    <img
                       src="/placeholder.svg?height=60&width=60"
                       alt="Retrato do cliente"
                       width={60}
@@ -351,7 +351,7 @@ export default function Home() {
               <Card className="border-2 border-gray-100">
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-center space-x-4">
-                    <Image
+                    <img
                       src="/placeholder.svg?height=60&width=60"
                       alt="Retrato do cliente"
                       width={60}
@@ -389,7 +389,7 @@ export default function Home() {
               <Card className="border-2 border-gray-100">
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-center space-x-4">
-                    <Image
+                    <img
                       src="/placeholder.svg?height=60&width=60"
                       alt="Retrato do cliente"
                       width={60}
