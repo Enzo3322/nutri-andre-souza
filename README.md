@@ -20,7 +20,7 @@ To deploy this site to GitHub Pages:
 The GitHub Actions workflow (`.github/workflows/deploy.yml`) will:
 
 1. Run automatically when you push to the `main` branch
-2. Install dependencies
+2. Install Yarn and dependencies
 3. Configure the Next.js app for static export with the correct base path
 4. Build the website
 5. Deploy it to GitHub Pages
@@ -36,16 +36,16 @@ You can also trigger deployment manually:
 
 ```bash
 # Install dependencies
-npm install
+yarn install
 
 # Start development server
-npm run dev
+yarn dev
 
 # Build for production
-npm run build
+yarn build
 
 # Start production server
-npm run start
+yarn start
 ```
 
 ## Customization
