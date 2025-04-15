@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, ChevronRight, Mail, Phone, MapPin, Instagram, Facebook, Twitter } from "lucide-react"
+import Pricing from "@/components/pricing-table"
 
 export default function Home() {
   return (
@@ -11,30 +12,30 @@ export default function Home() {
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between mx-auto">
           <div className="flex items-center gap-2">
-            <Heart className="h-6 w-6 text-green-600" />
-            <span className="text-xl font-bold">André Souza Nutrição</span>
+            <Image src="/logo-nav.png" alt="Logo" width={60} height={60} />
+            <span className="text-xl font-bold">André Souza </span>
           </div>
           <nav className="hidden md:flex gap-6">
-            <Link href="#services" className="text-sm font-medium transition-colors hover:text-green-600">
-              Services
+            <Link href="#services" className="text-sm font-medium transition-colors hover:text-gray-600">
+              Serviços
             </Link>
-            <Link href="#routines" className="text-sm font-medium transition-colors hover:text-green-600">
-              Routines
+            <Link href="#routines" className="text-sm font-medium transition-colors hover:text-gray-600">
+              Rotinas
             </Link>
-            <Link href="#testimonials" className="text-sm font-medium transition-colors hover:text-green-600">
-              Testimonials
+            <Link href="#testimonials" className="text-sm font-medium transition-colors hover:text-gray-600">
+              Depoimentos
             </Link>
-            <Link href="#contact" className="text-sm font-medium transition-colors hover:text-green-600">
-              Contact
+            <Link href="#contact" className="text-sm font-medium transition-colors hover:text-gray-600">
+              Contato
             </Link>
           </nav>
-          <Button className="bg-green-600 hover:bg-green-700">Book Consultation</Button>
+          <Button className="bg-[#bba058]">Agendar Avaliação</Button>
         </div>
       </header>
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-green-50">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
@@ -46,14 +47,14 @@ export default function Home() {
                   nutricional e bem-estar. São seis opções de planos, divididos em duas modalidades.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button className="bg-green-600 hover:bg-green-700">Get Started</Button>
-                  <Button variant="outline">Learn More</Button>
+                  <Button className="bg-[#bba058] hover:bg-gray-700">Começar</Button>
+                  <Button variant="outline">Saiba Mais</Button>
                 </div>
               </div>
               <div className="mx-auto lg:mx-0">
                 <Image
-                  src="/placeholder.svg?height=550&width=550"
-                  alt="Nutritionist consulting with client"
+                  src="/logo-full.png"
+                  alt="Nutricionista consultando com cliente"
                   width={550}
                   height={550}
                   className="rounded-lg object-cover"
@@ -68,7 +69,7 @@ export default function Home() {
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-700">
+                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm text-gray-700">
                   Nossos Serviços
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Planos de Consultoria Nutricional</h2>
@@ -80,9 +81,9 @@ export default function Home() {
 
             <div className="mt-12 space-y-12">
               {/* Webdiet Plan */}
-              <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-start">
+              <div className="grid gap-6 lg:grid-cols-1 lg:gap-12 items-start">
                 <div className="space-y-4">
-                  <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-700">
+                  <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm text-gray-700">
                     Modalidade 1
                   </div>
                   <h3 className="text-2xl font-bold">Acompanhamento via Webdiet</h3>
@@ -118,57 +119,17 @@ export default function Home() {
                     </ul>
                   </div>
 
-                  <div className="space-y-2 mt-6">
-                    <h4 className="font-bold text-lg">Valores:</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
-                      <Card className="border-2 border-green-100">
-                        <CardContent className="p-4 text-center">
-                          <h5 className="font-bold">Mensal</h5>
-                          <p className="text-2xl font-bold text-green-600 my-2">R$144,00</p>
-                          <p className="text-sm text-gray-500">à vista</p>
-                        </CardContent>
-                      </Card>
-                      <Card className="border-2 border-green-100">
-                        <CardContent className="p-4 text-center">
-                          <h5 className="font-bold">Bimestral</h5>
-                          <p className="text-2xl font-bold text-green-600 my-2">R$244,00</p>
-                          <p className="text-sm text-gray-500">à vista</p>
-                        </CardContent>
-                      </Card>
-                      <Card className="border-2 border-green-100">
-                        <CardContent className="p-4 text-center">
-                          <h5 className="font-bold">Trimestral</h5>
-                          <p className="text-2xl font-bold text-green-600 my-2">R$353,00</p>
-                          <p className="text-sm text-gray-500">à vista ou parcelado no cartão</p>
-                        </CardContent>
-                      </Card>
-                    </div>
+                  <div className="mt-8">
+                    <h4 className="font-bold text-lg mb-4">Planos disponíveis:</h4>
+                    <Pricing planIndex={0} />
                   </div>
-                </div>
-                <div>
-                  <Image
-                    src="/placeholder.svg?height=500&width=600"
-                    alt="Acompanhamento via Webdiet"
-                    width={600}
-                    height={500}
-                    className="rounded-lg object-cover"
-                  />
                 </div>
               </div>
 
               {/* WhatsApp Plan */}
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-start pt-12 border-t border-gray-200">
-                <div className="order-2 lg:order-1">
-                  <Image
-                    src="/placeholder.svg?height=500&width=600"
-                    alt="Acompanhamento Completo via WhatsApp"
-                    width={600}
-                    height={500}
-                    className="rounded-lg object-cover"
-                  />
-                </div>
                 <div className="space-y-4 order-1 lg:order-2">
-                  <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-700">
+                  <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm text-gray-700">
                     Modalidade 2
                   </div>
                   <h3 className="text-2xl font-bold">Acompanhamento Completo via WhatsApp</h3>
@@ -203,100 +164,79 @@ export default function Home() {
                     </ul>
                   </div>
 
-                  <div className="space-y-2 mt-6">
-                    <h4 className="font-bold text-lg">Valores:</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
-                      <Card className="border-2 border-green-100">
-                        <CardContent className="p-4 text-center">
-                          <h5 className="font-bold">Mensal</h5>
-                          <p className="text-2xl font-bold text-green-600 my-2">R$194,00</p>
-                          <p className="text-sm text-gray-500">à vista</p>
-                        </CardContent>
-                      </Card>
-                      <Card className="border-2 border-green-100">
-                        <CardContent className="p-4 text-center">
-                          <h5 className="font-bold">Bimestral</h5>
-                          <p className="text-2xl font-bold text-green-600 my-2">R$294,00</p>
-                          <p className="text-sm text-gray-500">à vista</p>
-                        </CardContent>
-                      </Card>
-                      <Card className="border-2 border-green-100">
-                        <CardContent className="p-4 text-center">
-                          <h5 className="font-bold">Trimestral</h5>
-                          <p className="text-2xl font-bold text-green-600 my-2">R$482,00</p>
-                          <p className="text-sm text-gray-500">à vista ou parcelado no cartão</p>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
+
                 </div>
+
+              </div>
+              <div className="mt-8">
+                <h4 className="font-bold text-lg mb-4">Planos disponíveis:</h4>
+                <Pricing planIndex={1} />
               </div>
             </div>
           </div>
         </section>
 
         {/* Routines Section */}
-        <section id="routines" className="w-full py-12 md:py-24 lg:py-32 bg-green-50">
+        {/* <section id="routines" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-700">
-                  Fitness & Nutrition
+                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm text-gray-700">
+                  Fitness & Nutrição
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Workout & Training Routines</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Rotinas de Treino & Exercícios</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Science-backed exercise programs designed to complement your nutrition plan.
+                  Programas de exercícios com base científica projetados para complementar seu plano nutricional.
                 </p>
               </div>
             </div>
 
             <div className="mt-12 space-y-12">
-              {/* Workout Routine */}
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <div className="space-y-4 order-2 lg:order-1">
-                  <h3 className="text-2xl font-bold">Weekly Workout Schedule</h3>
+                  <h3 className="text-2xl font-bold">Cronograma Semanal de Treinos</h3>
                   <div className="space-y-4">
-                    <div className="border-l-4 border-green-600 pl-4">
-                      <h4 className="font-bold">Monday: Upper Body Strength</h4>
-                      <p className="text-gray-500">Focus on chest, shoulders, and triceps with compound movements.</p>
+                    <div className="border-l-4 border-gray-600 pl-4">
+                      <h4 className="font-bold">Segunda-feira: Força de Parte Superior</h4>
+                      <p className="text-gray-500">Foco em peito, ombros e tríceps com movimentos compostos.</p>
                     </div>
-                    <div className="border-l-4 border-green-600 pl-4">
-                      <h4 className="font-bold">Tuesday: Cardio & Core</h4>
+                    <div className="border-l-4 border-gray-600 pl-4">
+                      <h4 className="font-bold">Terça-feira: Cardio & Core</h4>
                       <p className="text-gray-500">
-                        High-intensity interval training combined with core strengthening exercises.
+                        Treinamento intervalado de alta intensidade combinado com exercícios de fortalecimento do core.
                       </p>
                     </div>
-                    <div className="border-l-4 border-green-600 pl-4">
-                      <h4 className="font-bold">Wednesday: Rest & Recovery</h4>
-                      <p className="text-gray-500">Light stretching and mobility work to promote recovery.</p>
+                    <div className="border-l-4 border-gray-600 pl-4">
+                      <h4 className="font-bold">Quarta-feira: Descanso & Recuperação</h4>
+                      <p className="text-gray-500">Alongamento leve e trabalho de mobilidade para promover a recuperação.</p>
                     </div>
-                    <div className="border-l-4 border-green-600 pl-4">
-                      <h4 className="font-bold">Thursday: Lower Body Focus</h4>
+                    <div className="border-l-4 border-gray-600 pl-4">
+                      <h4 className="font-bold">Quinta-feira: Foco na Parte Inferior</h4>
                       <p className="text-gray-500">
-                        Targeting quads, hamstrings, and glutes for strength and stability.
+                        Direcionado a quadríceps, isquiotibiais e glúteos para força e estabilidade.
                       </p>
                     </div>
-                    <div className="border-l-4 border-green-600 pl-4">
-                      <h4 className="font-bold">Friday: Full Body Circuit</h4>
-                      <p className="text-gray-500">Comprehensive workout engaging all major muscle groups.</p>
+                    <div className="border-l-4 border-gray-600 pl-4">
+                      <h4 className="font-bold">Sexta-feira: Circuito de Corpo Inteiro</h4>
+                      <p className="text-gray-500">Treino abrangente envolvendo todos os principais grupos musculares.</p>
                     </div>
-                    <div className="border-l-4 border-green-600 pl-4">
-                      <h4 className="font-bold">Weekend: Active Recovery</h4>
+                    <div className="border-l-4 border-gray-600 pl-4">
+                      <h4 className="font-bold">Fim de semana: Recuperação Ativa</h4>
                       <p className="text-gray-500">
-                        Light activities like walking, swimming, or yoga to stay active while recovering.
+                        Atividades leves como caminhada, natação ou yoga para manter-se ativo enquanto recupera.
                       </p>
                     </div>
                   </div>
                   <div className="pt-4">
-                    <Link href="/workout-details" className="text-green-600 font-medium inline-flex items-center">
-                      View detailed workout plans <ChevronRight className="h-4 w-4 ml-1" />
+                    <Link href="/workout-details" className="text-gray-600 font-medium inline-flex items-center">
+                      Ver planos de treino detalhados <ChevronRight className="h-4 w-4 ml-1" />
                     </Link>
                   </div>
                 </div>
                 <div className="order-1 lg:order-2">
                   <Image
                     src="/placeholder.svg?height=400&width=600"
-                    alt="Person exercising"
+                    alt="Pessoa se exercitando"
                     width={600}
                     height={400}
                     className="rounded-lg object-cover"
@@ -304,91 +244,90 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Nutrition Plan */}
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
                   <Image
                     src="/placeholder.svg?height=400&width=600"
-                    alt="Healthy meal preparation"
+                    alt="Preparação de refeição saudável"
                     width={600}
                     height={400}
                     className="rounded-lg object-cover"
                   />
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">Nutrition Planning</h3>
+                  <h3 className="text-2xl font-bold">Planejamento Nutricional</h3>
                   <div className="space-y-4">
-                    <div className="border-l-4 border-green-600 pl-4">
-                      <h4 className="font-bold">Meal Timing</h4>
+                    <div className="border-l-4 border-gray-600 pl-4">
+                      <h4 className="font-bold">Horário das Refeições</h4>
                       <p className="text-gray-500">
-                        Strategic meal scheduling to optimize energy levels and nutrient absorption.
+                        Programação estratégica de refeições para otimizar os níveis de energia e absorção de nutrientes.
                       </p>
                     </div>
-                    <div className="border-l-4 border-green-600 pl-4">
-                      <h4 className="font-bold">Macro Distribution</h4>
+                    <div className="border-l-4 border-gray-600 pl-4">
+                      <h4 className="font-bold">Distribuição de Macronutrientes</h4>
                       <p className="text-gray-500">
-                        Balanced intake of proteins, carbohydrates, and fats tailored to your activity level.
+                        Ingestão balanceada de proteínas, carboidratos e gorduras adaptada ao seu nível de atividade.
                       </p>
                     </div>
-                    <div className="border-l-4 border-green-600 pl-4">
-                      <h4 className="font-bold">Hydration Strategy</h4>
+                    <div className="border-l-4 border-gray-600 pl-4">
+                      <h4 className="font-bold">Estratégia de Hidratação</h4>
                       <p className="text-gray-500">
-                        Personalized hydration plans to support metabolism and overall health.
+                        Planos de hidratação personalizados para apoiar o metabolismo e a saúde geral.
                       </p>
                     </div>
-                    <div className="border-l-4 border-green-600 pl-4">
-                      <h4 className="font-bold">Supplement Recommendations</h4>
+                    <div className="border-l-4 border-gray-600 pl-4">
+                      <h4 className="font-bold">Recomendações de Suplementos</h4>
                       <p className="text-gray-500">
-                        Evidence-based supplement suggestions to address specific nutritional needs.
+                        Sugestões de suplementos baseadas em evidências para atender necessidades nutricionais específicas.
                       </p>
                     </div>
                   </div>
                   <div className="pt-4">
-                    <Link href="/nutrition-details" className="text-green-600 font-medium inline-flex items-center">
-                      Explore nutrition plans <ChevronRight className="h-4 w-4 ml-1" />
+                    <Link href="/nutrition-details" className="text-gray-600 font-medium inline-flex items-center">
+                      Explorar planos nutricionais <ChevronRight className="h-4 w-4 ml-1" />
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Testimonials Section */}
         <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-700">
-                  Success Stories
+                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm text-gray-700">
+                  Histórias de Sucesso
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Our Clients Say</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">O Que Nossos Clientes Dizem</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Real results from real people who transformed their health with our guidance.
+                  Resultados reais de pessoas reais que transformaram sua saúde com nossa orientação.
                 </p>
               </div>
             </div>
 
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
               {/* Testimonial 1 */}
-              <Card className="border-2 border-green-100">
+              <Card className="border-2 border-gray-100">
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-center space-x-4">
                     <Image
                       src="/placeholder.svg?height=60&width=60"
-                      alt="Client portrait"
+                      alt="Retrato do cliente"
                       width={60}
                       height={60}
                       className="rounded-full"
                     />
                     <div>
                       <h4 className="font-bold">Sarah Johnson</h4>
-                      <p className="text-sm text-gray-500">Lost 30 lbs in 6 months</p>
+                      <p className="text-sm text-gray-500">Perdeu 14 kg em 6 meses</p>
                     </div>
                   </div>
                   <p className="italic text-gray-600">
-                    "The personalized meal plans and workout routines completely transformed my relationship with food
-                    and exercise. I've never felt healthier or more energetic!"
+                    "Os planos de refeições personalizados e rotinas de treino transformaram completamente minha relação com a comida
+                    e exercícios. Nunca me senti mais saudável ou com mais energia!"
                   </p>
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
@@ -409,24 +348,24 @@ export default function Home() {
               </Card>
 
               {/* Testimonial 2 */}
-              <Card className="border-2 border-green-100">
+              <Card className="border-2 border-gray-100">
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-center space-x-4">
                     <Image
                       src="/placeholder.svg?height=60&width=60"
-                      alt="Client portrait"
+                      alt="Retrato do cliente"
                       width={60}
                       height={60}
                       className="rounded-full"
                     />
                     <div>
                       <h4 className="font-bold">Michael Rodriguez</h4>
-                      <p className="text-sm text-gray-500">Gained muscle, improved performance</p>
+                      <p className="text-sm text-gray-500">Ganhou músculo, melhorou performance</p>
                     </div>
                   </div>
                   <p className="italic text-gray-600">
-                    "As an athlete, I needed a nutrition plan that supported my training. The customized approach helped
-                    me increase my strength while maintaining optimal energy levels."
+                    "Como atleta, eu precisava de um plano nutricional que apoiasse meu treinamento. A abordagem personalizada me ajudou
+                    a aumentar minha força enquanto mantinha níveis ótimos de energia."
                   </p>
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
@@ -447,24 +386,24 @@ export default function Home() {
               </Card>
 
               {/* Testimonial 3 */}
-              <Card className="border-2 border-green-100">
+              <Card className="border-2 border-gray-100">
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-center space-x-4">
                     <Image
                       src="/placeholder.svg?height=60&width=60"
-                      alt="Client portrait"
+                      alt="Retrato do cliente"
                       width={60}
                       height={60}
                       className="rounded-full"
                     />
                     <div>
                       <h4 className="font-bold">Jennifer Lee</h4>
-                      <p className="text-sm text-gray-500">Managed chronic condition</p>
+                      <p className="text-sm text-gray-500">Controlou condição crônica</p>
                     </div>
                   </div>
                   <p className="italic text-gray-600">
-                    "After being diagnosed with an autoimmune condition, I needed to completely revamp my diet. The
-                    guidance I received was life-changing and helped me manage my symptoms naturally."
+                    "Depois de ser diagnosticada com uma condição autoimune, precisei reformular completamente minha dieta. A
+                    orientação que recebi mudou minha vida e me ajudou a controlar meus sintomas naturalmente."
                   </p>
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
@@ -488,56 +427,56 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-green-50">
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-start">
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-700">
-                    Get In Touch
+                  <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm text-gray-700">
+                    Entre em Contato
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Contact Us</h2>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Fale Conosco</h2>
                   <p className="text-gray-500 md:text-xl">
-                    Have questions or ready to start your health journey? Reach out to us today.
+                    Tem dúvidas ou está pronto para iniciar sua jornada de saúde? Entre em contato conosco hoje.
                   </p>
                 </div>
 
                 <div className="space-y-4 pt-4">
                   <div className="flex items-start space-x-4">
-                    <Phone className="h-5 w-5 text-green-600 mt-0.5" />
+                    <Phone className="h-5 w-5 text-gray-600 mt-0.5" />
                     <div>
-                      <h3 className="font-bold">Phone</h3>
+                      <h3 className="font-bold">Telefone</h3>
                       <p className="text-gray-500">(555) 123-4567</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <Mail className="h-5 w-5 text-green-600 mt-0.5" />
+                    <Mail className="h-5 w-5 text-gray-600 mt-0.5" />
                     <div>
                       <h3 className="font-bold">Email</h3>
                       <p className="text-gray-500">info@nutrilife.com</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <MapPin className="h-5 w-5 text-green-600 mt-0.5" />
+                    <MapPin className="h-5 w-5 text-gray-600 mt-0.5" />
                     <div>
-                      <h3 className="font-bold">Office</h3>
-                      <p className="text-gray-500">123 Wellness Street, Healthy City, HC 12345</p>
+                      <h3 className="font-bold">Escritório</h3>
+                      <p className="text-gray-500">Rua do Bem-Estar, 123, Cidade Saudável, CS 12345</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="pt-4">
-                  <h3 className="font-bold mb-2">Follow Us</h3>
+                  <h3 className="font-bold mb-2">Siga-nos</h3>
                   <div className="flex space-x-4">
-                    <Link href="#" className="text-gray-500 hover:text-green-600">
+                    <Link href="#" className="text-gray-500 hover:text-gray-600">
                       <Instagram className="h-6 w-6" />
                       <span className="sr-only">Instagram</span>
                     </Link>
-                    <Link href="#" className="text-gray-500 hover:text-green-600">
+                    <Link href="#" className="text-gray-500 hover:text-gray-600">
                       <Facebook className="h-6 w-6" />
                       <span className="sr-only">Facebook</span>
                     </Link>
-                    <Link href="#" className="text-gray-500 hover:text-green-600">
+                    <Link href="#" className="text-gray-500 hover:text-gray-600">
                       <Twitter className="h-6 w-6" />
                       <span className="sr-only">Twitter</span>
                     </Link>
@@ -547,27 +486,27 @@ export default function Home() {
 
               <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
                 <div className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold">Send Us a Message</h3>
+                  <h3 className="text-xl font-bold">Envie-nos uma Mensagem</h3>
                   <form className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <label htmlFor="first-name" className="text-sm font-medium">
-                          First name
+                          Nome
                         </label>
                         <input
                           id="first-name"
                           className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                          placeholder="John"
+                          placeholder="João"
                         />
                       </div>
                       <div className="space-y-2">
                         <label htmlFor="last-name" className="text-sm font-medium">
-                          Last name
+                          Sobrenome
                         </label>
                         <input
                           id="last-name"
                           className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                          placeholder="Doe"
+                          placeholder="Silva"
                         />
                       </div>
                     </div>
@@ -579,30 +518,30 @@ export default function Home() {
                         id="email"
                         type="email"
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="john.doe@example.com"
+                        placeholder="joao.silva@exemplo.com"
                       />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="subject" className="text-sm font-medium">
-                        Subject
+                        Assunto
                       </label>
                       <input
                         id="subject"
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="How can we help you?"
+                        placeholder="Como podemos ajudar?"
                       />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="message" className="text-sm font-medium">
-                        Message
+                        Mensagem
                       </label>
                       <textarea
                         id="message"
                         className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Tell us what you're looking for..."
+                        placeholder="Diga-nos o que você está procurando..."
                       />
                     </div>
-                    <Button className="w-full bg-green-600 hover:bg-green-700">Send Message</Button>
+                    <Button className="w-full bg-gray-600 hover:bg-gray-700">Enviar Mensagem</Button>
                   </form>
                 </div>
               </div>
@@ -615,20 +554,20 @@ export default function Home() {
       <footer className="w-full border-t py-6 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <div className="flex items-center gap-2">
-            <Heart className="h-6 w-6 text-green-600" />
-            <span className="text-lg font-bold">André Souza Nutrição</span>
+            <Heart className="h-6 w-6 text-gray-600" />
+            <span className="text-lg font-bold">André Souza </span>
           </div>
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            © {new Date().getFullYear()} André Souza Nutrição. Todos os direitos reservados.
+            © {new Date().getFullYear()} André Souza. Todos os direitos reservados.
           </p>
           <nav className="flex gap-4 sm:gap-6">
-            <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-green-600">
-              Terms
+            <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-gray-600">
+              Termos
             </Link>
-            <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-green-600">
-              Privacy
+            <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-gray-600">
+              Privacidade
             </Link>
-            <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-green-600">
+            <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-gray-600">
               Cookies
             </Link>
           </nav>
